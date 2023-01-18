@@ -1,15 +1,13 @@
-a, b = map(int, input().split())
-t = 45
-b -= 45
+h, m = map(int, input().split())
 
-#if b is positive
-if b >= 0:
-    print(a,b)
-        
-#if b is negative
+m -= 45
+
+if m < 0:
+    m += 60
+    h -= 1
+    if h < 0:
+        h += 24
+    print(h,m)
+
 else:
-    b += 60
-    a -= 1
-    if a < 0:
-        a += 24
-    print(a,b)
+    print(h, m)       
