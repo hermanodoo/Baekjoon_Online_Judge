@@ -1,9 +1,4 @@
-T = int(input())
-
-re = list()
-
-for i in range(T):
-    a = list(map(int, input().split()))
-    re.append(f'Case #{i+1}: {a[0]} + {a[1]} = {a[0]+a[1]}')
-for i in re:
-    print(i)
+import sys
+for i in range(1, int(input())+1):
+    a, b = map(int, sys.stdin.readline().rstrip().split())
+    print(f'Case #{i}: {a} + {b} = {a+b}')
