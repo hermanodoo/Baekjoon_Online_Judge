@@ -1,7 +1,8 @@
 import sys
-
+a, b = 1, 1
 while 1:
-    data = list(map(int,sys.stdin.readline().rstrip().split()))
-    if data[0] == 0 & data[1] == 0:
+    a, b = map(int, sys.stdin.readline().rstrip().split())
+    if a == 0 and b == 0:
         break
-    print(data[0]+data[1])
+    else:
+        print(a + b)
