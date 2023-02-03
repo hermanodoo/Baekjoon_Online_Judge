@@ -1,10 +1,9 @@
-self_num = list()
+notSelf = set()
+all = [i for i in range(1, 10001)]
 for i in range(1, 10001):
-    start = str(i)
-    splitted = [int(i) for i in start] + [i]
-    final = sum(splitted)
-    self_num.append(final)
-nothing = [i for i in range(1, 10001)]
-no_self = [i for i in nothing if i not in self_num]
-for i in no_self:
+    t = i + sum([int(x) for x in str(i)])
+    if t <= 10000:
+        notSelf.add(t)
+selfN = [i for i in all if i not in notSelf]
+for i in selfN:
     print(i)
