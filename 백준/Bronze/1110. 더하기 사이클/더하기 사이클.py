@@ -1,18 +1,13 @@
 n = int(input())
-m = n
-o = -1
-t = 0
+original = n
+counter = 0
 
-while 1:
-    if o != m:
-        if n < 10:
-            n = n*10 + n
-            o = n
-            t += 1
-        else:
-            n = (n%10)*10 + (n//10 + n%10)%10
-            o = n
-            t += 1
+def cycle(n, original, counter):
+    n = (n * 10 + n if n < 10 else (n % 10)*10 + (n // 10 + n % 10) % 10)
+    counter += 1
+    if n != original:
+        cycle(n, original, counter)
     else:
-        print(t)
-        break
+        print(counter)
+
+cycle(n, original, counter)
