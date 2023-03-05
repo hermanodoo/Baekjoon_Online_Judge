@@ -1,6 +1,5 @@
-T = int(input())
-result = ''
+import sys 
+T = int(input()) 
 for _ in range(T):
-    a, b = map(int, input().split())
-    result += (str(a + b) + '\n')
-print(result)
+    a, b = map(int, sys.stdin.readline().rstrip().split()) 
+    print(a + b)
