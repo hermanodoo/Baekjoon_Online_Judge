@@ -1,3 +1,4 @@
-T = int(input())
-for _ in range(T):
-    print(sum(map(int, input().split())))
+n = int(input())
+for i in range(n):
+    a = input().split()
+    print(int(a[0]) + int(a[1]))
