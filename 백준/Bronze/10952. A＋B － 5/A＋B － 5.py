@@ -1,5 +1,5 @@
 import sys
-a, b = 1, 1
+a, b = None, None
 while 1:
     a, b = map(int, sys.stdin.readline().rstrip().split())
     if a == 0 and b == 0:
