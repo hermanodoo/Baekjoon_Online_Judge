@@ -1,4 +1,6 @@
-n = int(input())
-for i in range(n):
-    a = input().split()
-    print(int(a[0]) + int(a[1]))
+T = int(input())
+result = ''
+for _ in range(T):
+    a, b = map(int, input().split())
+    result += (str(a + b) + '\n')
+print(result)
